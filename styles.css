@@ -20,7 +20,6 @@ body::before {
     content: "";
     background-image: url(images/glare-small.png);
     background-size: contain;
-    /* background-size: 40%; */
     background-repeat: no-repeat;
     background-position: center top;
     position: absolute;
@@ -72,10 +71,6 @@ a.sidebar-links {
     text-decoration: underline;
     display: block;
 }
-/* 
-#sidebar > a:visited {
-    color: rgb(12, 106, 50);
-} */
 
 #bottom-sidebar-text {
     margin-top: auto;
@@ -84,7 +79,7 @@ a.sidebar-links {
 }
 
 #main-content {
-    grid-column: 2;
+    grid-column: 1/3;
     grid-row: 2;
     justify-self: center;
     padding: 10px;
@@ -111,4 +106,10 @@ a.sidebar-links {
 .album-art-card > img {
     width: 100%;
     height: auto;
+}
+
+@media (min-width: 700px) {
+    #main-content {
+        grid-column: 2;
+    }
 }
