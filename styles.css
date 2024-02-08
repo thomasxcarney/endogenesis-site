@@ -1,6 +1,6 @@
 * {
     margin: 0px;
-    border: 0px;
+    padding: 0px;
     font-family: "Roboto Mono", monospace;
     font-optical-sizing: auto;
     font-size: 14px;
@@ -12,14 +12,17 @@ body {
     display: grid;
     grid-template-rows: min-content 1fr;
     grid-template-columns: 1fr 4fr 1fr;
+    height: 100vh;
+    max-height: 100%;
 }
 
 body::before {
     content: "";
     background-image: url(images/glare-small.png);
     background-size: contain;
+    /* background-size: 40%; */
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
     position: absolute;
     top: 0px;
     right: 0px;
@@ -38,15 +41,9 @@ body::before {
     justify-content: center;
 }
 
-/* #red-logo {
-    max-height: 200px;
-    z-index: -1;
-    position: absolute;
-} */
-
 #header-img {
-    max-width: 50%;
-    z-index: 1;
+    max-width: 45%;
+    filter: drop-shadow(0px 0px 3px white);
 }
 
 #sidebar {
@@ -54,24 +51,36 @@ body::before {
     grid-row: 2;
     padding: 10px;
     justify-self: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #sidebar-header {
     margin-bottom: 10px;
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255));
 }
 
 #nyc {
     font-weight: 300;
 }
 
-#sidebar > a {
-    text-decoration: none;
-    display: block;
+.sidebar-links {
     color: rgb(12, 106, 50);
 }
 
+a.sidebar-links {
+    text-decoration: underline;
+    display: block;
+}
+/* 
 #sidebar > a:visited {
     color: rgb(12, 106, 50);
+} */
+
+#bottom-sidebar-text {
+    margin-top: auto;
+    font-size: 10px;
+    filter: drop-shadow(0 0 2px rgb(255, 255, 255));
 }
 
 #main-content {
@@ -84,6 +93,7 @@ body::before {
 
 #discog-container > p{
     font-size: 10px;
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.543));
 }
 
 #album-art-grid {
