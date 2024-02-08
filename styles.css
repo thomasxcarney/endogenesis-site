@@ -11,7 +11,7 @@ body {
     color: white;
     display: grid;
     grid-template-rows: min-content 1fr;
-    grid-template-columns: 1fr 4fr;
+    grid-template-columns: 1fr 4fr 1fr;
 }
 
 body::before {
@@ -32,7 +32,7 @@ body::before {
 #header {
     text-align: center;
     margin: 10px;
-    grid-column: 1 / 3;
+    grid-column: 1 / 4;
     grid-row: 1;
 }
 
@@ -75,16 +75,13 @@ body::before {
 #main-content {
     grid-column: 2;
     grid-row: 2;
-    /* justify-self: center; */
+    justify-self: center;
     padding: 10px;
+    margin: auto;
 }
 
 #discog-container > p{
     font-size: 10px;
-}
-
-#discog-container {
-    position: fixed;
 }
 
 #album-art-grid {
