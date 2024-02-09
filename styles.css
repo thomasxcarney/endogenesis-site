@@ -52,6 +52,7 @@ body::before {
     justify-self: center;
     display: flex;
     flex-direction: column;
+    max-height: 100%;
 }
 
 #sidebar-header {
@@ -89,23 +90,6 @@ a.sidebar-links {
 #discog-container > p{
     font-size: 10px;
     filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.543));
-}
-
-#album-art-grid {
-    margin: 10px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.album-art-card {
-    width: 200px;
-}
-
-.album-art-card > img {
-    width: 100%;
-    height: auto;
 }
 
 @media (min-width: 700px) {
